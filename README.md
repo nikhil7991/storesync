@@ -4,6 +4,8 @@ A basic inventory management app
 
 ## Demo
 
+[Live demo](https://nikhil7991.github.io/storesync/)
+
 ![Demo](public/storesync.gif)
 
 ## Screenshots
