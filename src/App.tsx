@@ -56,7 +56,12 @@ function App() {
   const dispatch = useAppDispatch();
 
   if (!!data && !isLoading) dispatch(gotData(data));
-  if (error) toast.error("Failed to fetch api");
+  if (error) {
+    toast.error(
+      `Failed to fetch api${error.status === 429 && ", Too many requests"}`
+    );
+    console.log(error);
+  }
   return (
     <Container>
       <Navbar />
