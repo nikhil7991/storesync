@@ -5,7 +5,6 @@ import {
   CardTitle,
 } from "../../components/ui/card";
 import { useAppSelector } from "../../redux/hooks";
-import { Skeleton } from "../ui/skeleton";
 
 type Props = {
   isLoading: boolean;

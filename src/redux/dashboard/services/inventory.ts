@@ -19,7 +19,7 @@ export const inventoryApi = createApi({
     baseUrl: "https://dev-0tf0hinghgjl39z.api.raw-labs.com",
   }),
   endpoints: (builder) => ({
-    getInventory: builder.query<inventoryData, void>({
+    getInventory: builder.query<inventoryData[], void>({
       query: () => `/inventory`,
     }),
   }),
