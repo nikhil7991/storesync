@@ -57,10 +57,13 @@ function App() {
 
   if (!!data && !isLoading) dispatch(gotData(data));
   if (error) {
-    toast.error(
-      `Failed to fetch api${error.status === 429 && ", Too many requests"}`
-    );
-    console.log(error);
+    if ("status" in error) {
+      toast.error(
+        `Failed to fetch api${error?.status === 429 && ", Too many requests"}`
+      );
+    } else {
+      toast.error(`Failed to fetch api`);
+    }
   }
   return (
     <Container>
