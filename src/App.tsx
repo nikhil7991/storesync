@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import Analytics from "./components/global/analytics";
 import { Container } from "./components/global/container";
 import DataTable from "./components/global/dataTable";
@@ -55,6 +56,7 @@ function App() {
   const dispatch = useAppDispatch();
 
   if (!!data && !isLoading) dispatch(gotData(data));
+  if (error) toast.error("Failed to fetch api");
   return (
     <Container>
       <Navbar />
