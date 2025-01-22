@@ -34,7 +34,7 @@ Install storesync with npm
 React
 Vite - Bundler
 Redux - State management
-RTK Query - Fetch/Caching API's
+RTK Query - Fetch/Caching API\'s
 Tailwind - CSS framework
 Shadcn ui - UI Library
 Radix ui - Accessibility
